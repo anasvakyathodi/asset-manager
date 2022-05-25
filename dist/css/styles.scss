@@ -1,0 +1,202 @@
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  .sidebar {
+    background: #73bbbf;
+    height: 100vh;
+    width: 245px;
+    padding: 2rem;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    .toggler {
+      cursor: pointer;
+    }
+    .navs {
+      margin-top: 5rem;
+      text-decoration: none;
+      color: white;
+      .link {
+        display: flex;
+        padding: 0.5rem 2rem;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+        margin: 1rem -2rem;
+        text-align: left;
+        cursor: pointer;
+        .title {
+          margin-left: 0.5rem;
+        }
+        &:hover {
+          .icon-img {
+            path {
+              fill: #73bbbf !important;
+            }
+          }
+          background: #ccf2f4;
+          color: #73bbbf;
+        }
+      }
+
+      .show,
+      .collapsing {
+        display: flex;
+        flex-direction: column;
+        font-weight: 400;
+        .route {
+          color: white;
+          text-decoration: none;
+          margin: 0.3rem 0;
+          margin-left: 1rem;
+          cursor: pointer;
+          .title {
+            margin-left: 0.5rem;
+          }
+          &:hover {
+            color: #73bbbf;
+            background-color: #ccf2f4;
+            margin-left: -2rem;
+            margin-right: -2rem;
+            padding-left: 3rem;
+          }
+        }
+      }
+    }
+  }
+  .main {
+    padding: 1rem;
+    background: #f5f5f5;
+    flex: 1;
+    height: 100vh;
+    .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      .search-bar {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: 1026px;
+        padding: 6px;
+        border-radius: 10px;
+        background-color: white;
+        .search-btn {
+          background: #364a7c;
+          cursor: pointer;
+          border-radius: 10px;
+          font-size: 1rem;
+          padding: 0.5rem 1rem;
+          color: white;
+          line-height: 200%;
+        }
+        .title {
+          button {
+            background: #c4c4c4;
+            outline: none;
+            border: none;
+            border-radius: 10px 0px 0px 10px;
+            font-size: 16px;
+            padding: 16px 29px;
+          }
+        }
+        input {
+          flex: auto;
+          padding: 0 0.5rem;
+          line-height: 0;
+          border: none;
+        }
+      }
+      .profile-part {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        .name {
+          margin: 0 0.5rem;
+        }
+      }
+    }
+    .sub-header {
+      background-color: #74bbbf;
+      padding: 0.5rem;
+      border-radius: 10px;
+      margin: 1rem 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      input {
+        border-radius: 10px;
+        border: none;
+        padding: 0.5rem 1rem;
+      }
+    }
+    .table-container {
+      flex: 1;
+      // height: calc(100vh - 222px);
+      .table {
+        // height: 100%;
+        thead tr {
+          border-radius: 8px 8px 0 0;
+          outline: 1px solid #474747;
+        }
+        tbody {
+          border-radius: 0 0 8px 8px;
+          outline: 1px solid #474747;
+        }
+      }
+      .update-btn{
+        cursor: pointer;
+      }
+    }
+    .footer {
+      // position: ab;
+      bottom: 0;
+      display: flex;
+      // width: 100%;
+      flex: 1;
+      // max-width: 1290px;
+      background: #c4c4c4;
+      margin: 0 -1rem;
+      padding: 0.2rem;
+      justify-content: center;
+    }
+    .modal {
+      .modal-header {
+        background-color: #73bbbf;
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .modal-content {
+        border-radius: 10px;
+      }
+      .modal-header {
+        border-radius: 10px 10px 0 0;
+      }
+      .modal-body {
+        .form{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 2rem;
+          input{
+            border-radius: 10px;
+            border: 1px solid #474747;
+          }
+        }
+        .add-btn {
+          background: #364a7c;
+          color: white;
+          font-size: 16px;
+          font-weight: 700;
+          margin-top: 2rem;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}

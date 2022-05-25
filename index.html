@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Asset Manager</title>
+    <link href="dist/css/styles.css" rel="stylesheet" />
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="sidebar">
+        <div class="toggler">
+          <img src="dist/images/toggler.svg" />
+        </div>
+        <div class="navs">
+          <span
+            class="link"
+            data-bs-toggle="collapse"
+            data-bs-target="#inventorysub"
+            aria-expanded="false"
+            aria-controls="inventorysub"
+          >
+            <span>
+              <span class="icon">
+                <img class="icon-img" src="dist/images/inventory.svg" />
+              </span>
+              <span class="title">Inventory</span>
+            </span>
+            <span class="arrow">
+              <img src="dist/images/down-arrow.svg" />
+            </span>
+          </span>
+          <div class="collapse" id="inventorysub">
+            <a class="route">
+              <span class="icon">→</span>
+              <span class="title">Services</span>
+            </a>
+            <a class="route">
+              <span class="icon">→</span>
+              <span class="title">Accessories</span>
+            </a>
+            <a class="route">
+              <span class="icon">→</span>
+              <span class="title">Devices</span>
+            </a>
+          </div>
+          <span
+            class="link"
+            data-bs-toggle="collapse"
+            data-bs-target="#devicesub"
+            aria-expanded="false"
+            aria-controls="devicesub"
+          >
+            <span>
+              <span class="icon">
+                <img class="icon-img" src="dist/images/device.svg" />
+              </span>
+              <span class="title">Device</span>
+            </span>
+            <span class="arrow">
+              <img src="dist/images/down-arrow.svg" />
+            </span>
+          </span>
+          <div class="collapse" id="devicesub">
+            <a class="route">
+              <span class="icon">→</span>
+              <span class="title">Assign Device</span>
+            </a>
+            <a class="route">
+              <span class="icon">→</span>
+              <span class="title">Order Entry</span>
+            </a>
+          </div>
+          <span
+            class="link"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseWidthExample"
+            aria-expanded="false"
+            aria-controls="collapseWidthExample"
+          >
+            <span>
+              <span class="icon">
+                <img class="icon-img" src="dist/images/vendor.svg" />
+              </span>
+              <span class="title">Vendor</span>
+            </span>
+            <span class="arrow">
+              <img src="dist/images/down-arrow.svg" />
+            </span>
+          </span>
+        </div>
+      </div>
+      <div class="main">
+        <div class="modal fade" id="addDeviceModal" tabindex="-1" aria-labelledby="addDeviceModal" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="addDeviceModalLabel">Add Device</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="form">
+                      <label>Service</label><input type="text"/>
+                  </div>
+                  <button class="btn add-btn w-100">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="updateDeviceModal" tabindex="-1" aria-labelledby="updateDeviceModal" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="updateDeviceModalLabel">Edit Service</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="form">
+                      <label>Service</label><input type="text"/>
+                  </div>
+                  <button class="btn add-btn w-100">Update</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="header">
+          <img src="dist/images/logo.svg" alt="logo" />
+          <div class="search-bar">
+            <span class="title" id="search-list">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="searchtoggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                All
+              </button>
+            </span>
+            <input type="text" placeholder="" />
+            <span class="search-btn"><img src="dist/images/search-icon.svg" />
+              <span>Search</span></span
+            >
+          </div>
+          <div class="profile-part">
+              <img src="dist/images/notifications.svg"/>
+              <div class="name"><div>Arman</div><div>Manager</div></div>
+              <img src="dist/images/profile.svg"/>
+              <img src="dist/images/moreprofile.svg"/>
+        </div>
+      </div>
+      <div class="sub-header">
+          <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addDeviceModal">Add Device</button>
+          <input type="text" placeholder="Search"/>
+      </div>
+      <div class="table-container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Created Date</th>
+                    <th>Modified Date</th>
+                    <th>Created By</th>
+                    <th>Modified Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="update-btn" data-bs-toggle="modal" data-bs-target="#updateDeviceModal">AI Patch</td>
+                    <td>01/11/2020 00:05:02:32:08</td>
+                    <td>01/11/2020 00:05:02:32:08</td>
+                    <td>Evan Flores</td>
+                    <td>Evan Flores</td>
+                    <td><img src="dist/images/pen.svg"/></td>
+                </tr>
+                <tr>
+                    <td class="update-btn" data-bs-toggle="modal" data-bs-target="#updateDeviceModal">AI Patch</td>
+                    <td>01/11/2020 00:05:02:32:08</td>
+                    <td>01/11/2020 00:05:02:32:08</td>
+                    <td>Evan Flores</td>
+                    <td>Evan Flores</td>
+                    <td><img src="dist/images/pen.svg"/></td>
+                </tr>
+                <tr>
+                    <td class="update-btn" data-bs-toggle="modal" data-bs-target="#updateDeviceModal">AI Patch</td>
+                    <td>01/11/2020 00:05:02:32:08</td>
+                    <td>01/11/2020 00:05:02:32:08</td>
+                    <td>Evan Flores</td>
+                    <td>Evan Flores</td>
+                    <td><img src="dist/images/pen.svg"/></td>
+                </tr>
+                <tr>
+                    <td class="update-btn" data-bs-toggle="modal" data-bs-target="#updateDeviceModal">AI Patch</td>
+                    <td>01/11/2020 00:05:02:32:08</td>
+                    <td>01/11/2020 00:05:02:32:08</td>
+                    <td>Evan Flores</td>
+                    <td>Evan Flores</td>
+                    <td><img src="dist/images/pen.svg"/></td>
+                </tr>
+                <tr>
+                    <td class="update-btn" data-bs-toggle="modal" data-bs-target="#updateDeviceModal">AI Patch</td>
+                    <td>01/11/2020 00:05:02:32:08</td>
+                    <td>01/11/2020 00:05:02:32:08</td>
+                    <td>Evan Flores</td>
+                    <td>Evan Flores</td>
+                    <td><img src="dist/images/pen.svg"/></td>
+                </tr>
+            </tbody>
+          </table>
+      </div>
+      <div class="footer">
+          <img src="dist/images/footer-logo.svg"/>
+      </div>
+    </div>
+    <script src="dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

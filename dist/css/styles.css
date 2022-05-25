@@ -1,0 +1,288 @@
+.dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.dashboard .sidebar {
+  background: #73bbbf;
+  height: 100vh;
+  width: 245px;
+  padding: 2rem;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.dashboard .sidebar .toggler {
+  cursor: pointer;
+}
+
+.dashboard .sidebar .navs {
+  margin-top: 5rem;
+  text-decoration: none;
+  color: white;
+}
+
+.dashboard .sidebar .navs .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem 2rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+  margin: 1rem -2rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dashboard .sidebar .navs .link .title {
+  margin-left: 0.5rem;
+}
+
+.dashboard .sidebar .navs .link:hover {
+  background: #ccf2f4;
+  color: #73bbbf;
+}
+
+.dashboard .sidebar .navs .link:hover .icon-img path {
+  fill: #73bbbf !important;
+}
+
+.dashboard .sidebar .navs .show,
+.dashboard .sidebar .navs .collapsing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 400;
+}
+
+.dashboard .sidebar .navs .show .route,
+.dashboard .sidebar .navs .collapsing .route {
+  color: white;
+  text-decoration: none;
+  margin: 0.3rem 0;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.dashboard .sidebar .navs .show .route .title,
+.dashboard .sidebar .navs .collapsing .route .title {
+  margin-left: 0.5rem;
+}
+
+.dashboard .sidebar .navs .show .route:hover,
+.dashboard .sidebar .navs .collapsing .route:hover {
+  color: #73bbbf;
+  background-color: #ccf2f4;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding-left: 3rem;
+}
+
+.dashboard .main {
+  padding: 1rem;
+  background: #f5f5f5;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100vh;
+}
+
+.dashboard .main .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.dashboard .main .header .search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  max-width: 1026px;
+  padding: 6px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.dashboard .main .header .search-bar .search-btn {
+  background: #364a7c;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  line-height: 200%;
+}
+
+.dashboard .main .header .search-bar .title button {
+  background: #c4c4c4;
+  outline: none;
+  border: none;
+  border-radius: 10px 0px 0px 10px;
+  font-size: 16px;
+  padding: 16px 29px;
+}
+
+.dashboard .main .header .search-bar input {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  padding: 0 0.5rem;
+  line-height: 0;
+  border: none;
+}
+
+.dashboard .main .header .profile-part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.dashboard .main .header .profile-part .name {
+  margin: 0 0.5rem;
+}
+
+.dashboard .main .sub-header {
+  background-color: #74bbbf;
+  padding: 0.5rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard .main .sub-header input {
+  border-radius: 10px;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+
+.dashboard .main .table-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.dashboard .main .table-container .table thead tr {
+  border-radius: 8px 8px 0 0;
+  outline: 1px solid #474747;
+}
+
+.dashboard .main .table-container .table tbody {
+  border-radius: 0 0 8px 8px;
+  outline: 1px solid #474747;
+}
+
+.dashboard .main .table-container .update-btn {
+  cursor: pointer;
+}
+
+.dashboard .main .footer {
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: #c4c4c4;
+  margin: 0 -1rem;
+  padding: 0.2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dashboard .main .modal .modal-header {
+  background-color: #73bbbf;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.dashboard .main .modal .modal-content {
+  border-radius: 10px;
+}
+
+.dashboard .main .modal .modal-header {
+  border-radius: 10px 10px 0 0;
+}
+
+.dashboard .main .modal .modal-body .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2rem;
+}
+
+.dashboard .main .modal .modal-body .form input {
+  border-radius: 10px;
+  border: 1px solid #474747;
+}
+
+.dashboard .main .modal .modal-body .add-btn {
+  background: #364a7c;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=styles.css.map */
