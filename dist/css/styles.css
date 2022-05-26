@@ -253,6 +253,7 @@
           flex: 1;
   height: calc(100vh - 209px);
   overflow: auto;
+  padding: .1rem;
 }
 
 .dashboard .main .table-container .table thead tr {
