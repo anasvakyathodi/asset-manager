@@ -321,6 +321,7 @@
 .dashboard .main .modal .modal-body .form input {
   border-radius: 10px;
   border: 1px solid #474747;
+  padding: 0 0.5rem;
 }
 
 .dashboard .main .modal .modal-body .add-btn {
