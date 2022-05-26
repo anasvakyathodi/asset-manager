@@ -324,7 +324,7 @@
   padding: 0 0.5rem;
 }
 
-.dashboard .main .modal .modal-body .add-btn {
+.dashboard .main .modal .modal-body .add-btn, .dashboard .main .modal .modal-body .update-btn {
   background: #364a7c;
   color: white;
   font-size: 16px;

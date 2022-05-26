@@ -8,7 +8,9 @@ const navsEl = document.querySelectorAll(".navs");
 const addModalData = document.querySelector(".input-data");
 const addBtn = document.querySelector(".add-btn");
 const tableBodyEl = document.querySelector(".table-content");
-
+const updateModalData = document.querySelector(".update-data");
+const updateBtn = document.querySelector(".update-btn");
+let updateContent = {};
 let data = [
   {
     id: "1",
@@ -52,7 +54,7 @@ let data = [
   },
 ];
 
-function renderTable() {
+const renderTable = () => {
   var child = tableBodyEl.lastElementChild;
   while (child) {
     tableBodyEl.removeChild(child);
@@ -66,6 +68,11 @@ function renderTable() {
       data1.setAttribute("id", id);
       data1.setAttribute("data-bs-toggle", "modal");
       data1.classList.add("update-btn");
+      data1.addEventListener("click", () => {
+        let updateData = data.filter((val) => val.id === id);
+        updateContent = updateData[0];
+        updateModalData.value = updateContent.service;
+      });
       data1.setAttribute("data-bs-target", "#updateDeviceModal");
       let data2 = document.createElement("td");
       data2.innerHTML = createdDate.toLocaleString();
@@ -85,8 +92,12 @@ function renderTable() {
       data6.setAttribute("data-bs-target", "#updateDeviceModal");
       let imgEl = document.createElement("img");
       imgEl.setAttribute("src", "dist/images/pen.svg");
+      data6.addEventListener("click", () => {
+        let updateData = data.filter((val) => val.id === id);
+        updateContent = updateData[0];
+        updateModalData.value = updateContent.service;
+      });
       data6.appendChild(imgEl);
-
       row.appendChild(data1);
       row.appendChild(data2);
       row.appendChild(data3);
@@ -96,7 +107,7 @@ function renderTable() {
       tableBodyEl.appendChild(row);
     }
   );
-}
+};
 
 renderTable();
 addBtn.addEventListener("click", () => {
@@ -111,6 +122,23 @@ addBtn.addEventListener("click", () => {
   data.push(payload);
   addModalData.value = "";
   let closeBtn = document.querySelector(".btn-close");
+  closeBtn.click();
+  renderTable();
+});
+
+updateBtn.addEventListener("click", () => {
+  updateContent.service = updateModalData.value;
+  updateContent.modifiedBy = "John Doe";
+  updateContent.modifiedDate = new Date();
+  data = data.map((el) => {
+    if (el.id === updateContent.id) {
+      return updateContent;
+    }
+    return el;
+  });
+  updateModalData.value = "";
+  updateContent = {};
+  let closeBtn = document.querySelectorAll(".btn-close")[1];
   closeBtn.click();
   renderTable();
 });
