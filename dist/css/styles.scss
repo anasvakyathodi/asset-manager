@@ -4,18 +4,21 @@
   .sidebar {
     background: #73bbbf;
     height: 100vh;
-    width: 245px;
     padding: 2rem;
     color: white;
     font-size: 16px;
     font-weight: 700;
     .toggler {
+      display: flex;
+      align-items: center;
       cursor: pointer;
     }
+    // justify-content: flex-start;
     .navs {
       margin-top: 5rem;
       text-decoration: none;
       color: white;
+      width: 245px;
       .link {
         display: flex;
         padding: 0.5rem 2rem;
@@ -63,6 +66,29 @@
         }
       }
     }
+    .nav-short {
+      width: max-content;
+      max-width: 100px;
+      display: flex;
+      flex-direction: column;
+      span {
+        margin:.5rem 0;
+        border-radius: 50%;
+        img{
+          padding: .5rem;
+          &:hover{
+            path{
+              fill: #73bbbf;
+            }
+          }
+        }
+        cursor: pointer;
+        &:hover{
+          color: #73bbbf;
+          background-color: #ccf2f4;
+        }
+      }
+    }
   }
   .main {
     padding: 1rem;
@@ -99,7 +125,7 @@
             border: none;
             border-radius: 10px 0px 0px 10px;
             font-size: 16px;
-            padding: 16px 29px;
+            padding: .7rem 2rem;
           }
         }
         input {
@@ -137,7 +163,8 @@
     }
     .table-container {
       flex: 1;
-      // height: calc(100vh - 222px);
+      height: calc(100vh - 209px);
+      overflow: scroll;
       .table {
         // height: 100%;
         thead tr {

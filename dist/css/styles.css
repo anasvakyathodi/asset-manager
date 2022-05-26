@@ -11,7 +11,6 @@
 .dashboard .sidebar {
   background: #73bbbf;
   height: 100vh;
-  width: 245px;
   padding: 2rem;
   color: white;
   font-size: 16px;
@@ -19,6 +18,12 @@
 }
 
 .dashboard .sidebar .toggler {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
 }
 
@@ -26,6 +31,7 @@
   margin-top: 5rem;
   text-decoration: none;
   color: white;
+  width: 245px;
 }
 
 .dashboard .sidebar .navs .link {
@@ -94,6 +100,39 @@
   padding-left: 3rem;
 }
 
+.dashboard .sidebar .nav-short {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dashboard .sidebar .nav-short span {
+  margin: .5rem 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dashboard .sidebar .nav-short span img {
+  padding: .5rem;
+}
+
+.dashboard .sidebar .nav-short span img:hover path {
+  fill: #73bbbf;
+}
+
+.dashboard .sidebar .nav-short span:hover {
+  color: #73bbbf;
+  background-color: #ccf2f4;
+}
+
 .dashboard .main {
   padding: 1rem;
   background: #f5f5f5;
@@ -151,7 +190,7 @@
   border: none;
   border-radius: 10px 0px 0px 10px;
   font-size: 16px;
-  padding: 16px 29px;
+  padding: .7rem 2rem;
 }
 
 .dashboard .main .header .search-bar input {
@@ -212,6 +251,8 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  height: calc(100vh - 209px);
+  overflow: scroll;
 }
 
 .dashboard .main .table-container .table thead tr {

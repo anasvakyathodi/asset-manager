@@ -85,24 +85,23 @@
               </span>
               <span class="title">Vendor</span>
             </span>
-            <span class="arrow">
+            <!-- <span class="arrow">
               <img src="dist/images/down-arrow.svg" />
-            </span>
+            </span> -->
           </span>
         </div>
-        <div class="navs">
-          
-            <span>
+        <div class="navs nav-short">
+            <span id="inventory-short">
               <span class="icon">
                 <img class="icon-img" src="dist/images/inventory.svg" />
               </span>
           </span>
-          <span>
+          <span class="under-maintenance">
             <span class="icon">
               <img class="icon-img" src="dist/images/device.svg" />
             </span>
         </span>
-        <span>
+        <span class="under-maintenance">
           <span class="icon">
             <img class="icon-img" src="dist/images/vendor.svg" />
           </span>
@@ -119,7 +118,7 @@
                 </div>
                 <div class="modal-body">
                   <div class="form">
-                      <label>Service</label><input type="text"/>
+                      <label>Service</label><input type="text" class="input-data"/>
                   </div>
                   <button class="btn add-btn w-100">Add</button>
                 </div>
@@ -184,47 +183,7 @@
                     <th>Action</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td class="update-btn" data-bs-toggle="modal" data-bs-target="#updateDeviceModal">AI Patch</td>
-                    <td>01/11/2020 00:05:02:32:08</td>
-                    <td>01/11/2020 00:05:02:32:08</td>
-                    <td>Evan Flores</td>
-                    <td>Evan Flores</td>
-                    <td class="action" data-bs-toggle="modal" data-bs-target="#updateDeviceModal"><img src="dist/images/pen.svg"/></td>
-                </tr>
-                <tr>
-                    <td class="update-btn" data-bs-toggle="modal" data-bs-target="#updateDeviceModal">AI Patch</td>
-                    <td>01/11/2020 00:05:02:32:08</td>
-                    <td>01/11/2020 00:05:02:32:08</td>
-                    <td>Evan Flores</td>
-                    <td>Evan Flores</td>
-                    <td class="action" data-bs-toggle="modal" data-bs-target="#updateDeviceModal"><img src="dist/images/pen.svg"/></td>
-                </tr>
-                <tr>
-                    <td class="update-btn" data-bs-toggle="modal" data-bs-target="#updateDeviceModal">AI Patch</td>
-                    <td>01/11/2020 00:05:02:32:08</td>
-                    <td>01/11/2020 00:05:02:32:08</td>
-                    <td>Evan Flores</td>
-                    <td>Evan Flores</td>
-                    <td class="action" data-bs-toggle="modal" data-bs-target="#updateDeviceModal"><img src="dist/images/pen.svg"/></td>
-                </tr>
-                <tr>
-                    <td class="update-btn" data-bs-toggle="modal" data-bs-target="#updateDeviceModal">AI Patch</td>
-                    <td>01/11/2020 00:05:02:32:08</td>
-                    <td>01/11/2020 00:05:02:32:08</td>
-                    <td>Evan Flores</td>
-                    <td>Evan Flores</td>
-                    <td class="action" data-bs-toggle="modal" data-bs-target="#updateDeviceModal"><img src="dist/images/pen.svg"/></td>
-                </tr>
-                <tr>
-                    <td class="update-btn" data-bs-toggle="modal" data-bs-target="#updateDeviceModal">AI Patch</td>
-                    <td>01/11/2020 00:05:02:32:08</td>
-                    <td>01/11/2020 00:05:02:32:08</td>
-                    <td>Evan Flores</td>
-                    <td>Evan Flores</td>
-                    <td class="action" data-bs-toggle="modal" data-bs-target="#updateDeviceModal"><img src="dist/images/pen.svg"/></td>
-                </tr>
+            <tbody class="table-content">
             </tbody>
           </table>
       </div>
