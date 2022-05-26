@@ -164,7 +164,7 @@
     .table-container {
       flex: 1;
       height: calc(100vh - 209px);
-      overflow: scroll;
+      overflow: auto;
       .table {
         // height: 100%;
         thead tr {
