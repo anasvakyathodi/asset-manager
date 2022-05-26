@@ -114,6 +114,7 @@
         flex-direction: row;
         align-items: center;
         text-align: center;
+        cursor: pointer;
         .name {
           margin: 0 0.5rem;
         }
@@ -146,9 +147,12 @@
         tbody {
           border-radius: 0 0 8px 8px;
           outline: 1px solid #474747;
+          .action {
+            cursor: pointer;
+          }
         }
       }
-      .update-btn{
+      .update-btn {
         cursor: pointer;
       }
     }
@@ -178,12 +182,12 @@
         border-radius: 10px 10px 0 0;
       }
       .modal-body {
-        .form{
+        .form {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           gap: 2rem;
-          input{
+          input {
             border-radius: 10px;
             border: 1px solid #474747;
           }
@@ -199,4 +203,16 @@
       }
     }
   }
+
+  .under-work {
+    display: flex;
+    flex: 1;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.hidden {
+  display: none !important;
 }
