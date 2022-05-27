@@ -81,23 +81,23 @@ const renderTable = () => {
       data3.innerHTML = modifiedDate.toLocaleString();
       data3.setAttribute("id", id);
       let data4 = document.createElement("td");
-      let profile = document.createElement("img")
-      profile.setAttribute("src","dist/images/profile1.svg")
-      profile.style.marginRight = "0.5rem"
-      data4.appendChild(profile)
-      let title = document.createElement("span")
-      title.innerHTML = createdBy
-      data4.appendChild(title)
+      let profile = document.createElement("img");
+      profile.setAttribute("src", "dist/images/profile1.svg");
+      profile.style.marginRight = "0.5rem";
+      data4.appendChild(profile);
+      let title = document.createElement("span");
+      title.innerHTML = createdBy;
+      data4.appendChild(title);
       // data4.innerHTML = createdBy;
       data4.setAttribute("id", id);
       let data5 = document.createElement("td");
-      profile = document.createElement("img")
-      profile.setAttribute("src","dist/images/profile2.svg")
-      profile.style.marginRight = "0.5rem"
-      data5.appendChild(profile)
-      title = document.createElement("span")
-      title.innerHTML = createdBy
-      data5.appendChild(title)
+      profile = document.createElement("img");
+      profile.setAttribute("src", "dist/images/profile2.svg");
+      profile.style.marginRight = "0.5rem";
+      data5.appendChild(profile);
+      title = document.createElement("span");
+      title.innerHTML = createdBy;
+      data5.appendChild(title);
       // data5.innerHTML = modifiedBy;
       data5.setAttribute("id", id);
       let data6 = document.createElement("td");
@@ -106,7 +106,7 @@ const renderTable = () => {
       data6.setAttribute("data-bs-target", "#updateDeviceModal");
       let imgEl1 = document.createElement("img");
       imgEl1.setAttribute("src", "dist/images/pen.svg");
-      imgEl1.style.marginRight = "0.5rem"
+      imgEl1.style.marginRight = "0.5rem";
       let imgEl2 = document.createElement("img");
       imgEl2.setAttribute("src", "dist/images/table-toggler.svg");
       data6.addEventListener("click", () => {
@@ -173,6 +173,7 @@ togglerBtn.addEventListener("click", () => {
   navsEl.forEach((el) => {
     el.classList.toggle("hidden");
   });
+  togglerBtn.classList.toggle("ml-3")
 });
 otherRouteBtns.forEach((el) => {
   el.addEventListener("click", () => {

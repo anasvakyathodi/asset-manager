@@ -7,13 +7,13 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .dashboard .sidebar {
   background: #73bbbf;
   height: 100vh;
-  padding: 2rem;
+  padding: 1rem;
   color: white;
   font-size: 16px;
   font-weight: 700;
@@ -27,6 +27,13 @@
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+  position: relative;
+  left: 5px;
+}
+
+.dashboard .sidebar .navs-expand {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .dashboard .sidebar .navs {
@@ -117,13 +124,13 @@
 }
 
 .dashboard .sidebar .nav-short span {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .dashboard .sidebar .nav-short span img {
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .dashboard .sidebar .nav-short span img:hover path {
@@ -192,7 +199,7 @@
   border: none;
   border-radius: 10px 0px 0px 10px;
   font-size: 16px;
-  padding: .7rem 2rem;
+  padding: 0.7rem 2rem;
 }
 
 .dashboard .main .header .search-bar input {
@@ -268,13 +275,13 @@
           flex: 1;
   height: calc(100vh - 209px);
   overflow: auto;
-  padding: .1rem;
+  padding: 0.1rem;
 }
 
 .dashboard .main .table-container .table thead tr {
   border-radius: 8px 8px 0 0;
   outline: 1px solid #474747;
-  background: #DEE3E9;
+  background: #dee3e9;
 }
 
 .dashboard .main .table-container .table tbody {
@@ -341,7 +348,8 @@
   padding: 0 0.5rem;
 }
 
-.dashboard .main .modal .modal-body .add-btn, .dashboard .main .modal .modal-body .update-btn {
+.dashboard .main .modal .modal-body .add-btn,
+.dashboard .main .modal .modal-body .update-btn {
   background: #364a7c;
   color: white;
   font-size: 16px;
@@ -372,5 +380,9 @@
 
 .table-bordered > :not(caption) > * > * {
   border-width: 0 !important;
+}
+
+.ml-3 {
+  margin-left: calc(1rem - 5px);
 }
 /*# sourceMappingURL=styles.css.map */
