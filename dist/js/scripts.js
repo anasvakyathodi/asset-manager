@@ -106,6 +106,7 @@ const renderTable = () => {
       data6.setAttribute("data-bs-target", "#updateDeviceModal");
       let imgEl1 = document.createElement("img");
       imgEl1.setAttribute("src", "dist/images/pen.svg");
+      imgEl1.style.marginRight = "0.5rem"
       let imgEl2 = document.createElement("img");
       imgEl2.setAttribute("src", "dist/images/table-toggler.svg");
       data6.addEventListener("click", () => {
