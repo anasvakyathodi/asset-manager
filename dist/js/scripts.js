@@ -90,14 +90,17 @@ const renderTable = () => {
       data6.setAttribute("data-bs-toggle", "modal");
       data6.classList.add("action");
       data6.setAttribute("data-bs-target", "#updateDeviceModal");
-      let imgEl = document.createElement("img");
-      imgEl.setAttribute("src", "dist/images/pen.svg");
+      let imgEl1 = document.createElement("img");
+      imgEl1.setAttribute("src", "dist/images/pen.svg");
+      let imgEl2 = document.createElement("img");
+      imgEl2.setAttribute("src", "dist/images/table-toggler.svg");
       data6.addEventListener("click", () => {
         let updateData = data.filter((val) => val.id === id);
         updateContent = updateData[0];
         updateModalData.value = updateContent.service;
       });
-      data6.appendChild(imgEl);
+      data6.appendChild(imgEl1);
+      data6.appendChild(imgEl2);
       row.appendChild(data1);
       row.appendChild(data2);
       row.appendChild(data3);
