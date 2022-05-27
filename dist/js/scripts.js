@@ -81,10 +81,24 @@ const renderTable = () => {
       data3.innerHTML = modifiedDate.toLocaleString();
       data3.setAttribute("id", id);
       let data4 = document.createElement("td");
-      data4.innerHTML = createdBy;
+      let profile = document.createElement("img")
+      profile.setAttribute("src","dist/images/profile1.svg")
+      profile.style.marginRight = "0.5rem"
+      data4.appendChild(profile)
+      let title = document.createElement("span")
+      title.innerHTML = createdBy
+      data4.appendChild(title)
+      // data4.innerHTML = createdBy;
       data4.setAttribute("id", id);
       let data5 = document.createElement("td");
-      data5.innerHTML = modifiedBy;
+      profile = document.createElement("img")
+      profile.setAttribute("src","dist/images/profile2.svg")
+      profile.style.marginRight = "0.5rem"
+      data5.appendChild(profile)
+      title = document.createElement("span")
+      title.innerHTML = createdBy
+      data5.appendChild(title)
+      // data5.innerHTML = modifiedBy;
       data5.setAttribute("id", id);
       let data6 = document.createElement("td");
       data6.setAttribute("data-bs-toggle", "modal");
