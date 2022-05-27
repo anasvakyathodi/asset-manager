@@ -253,7 +253,7 @@
 .dashboard .main .sub-header input {
   border-radius: 10px;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem 0.5rem 1rem;
 }
 
 .dashboard .main .sub-header form.nosubmit {
@@ -263,7 +263,6 @@
 
 .dashboard .main .sub-header input.nosubmit {
   width: 100%;
-  padding: 9px 40px 9px 20px;
   background: white url("./../images/search-icon-2.svg") no-repeat;
   background-position-x: 96%;
   background-position-y: center;
